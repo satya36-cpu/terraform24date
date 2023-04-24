@@ -5,16 +5,16 @@ metadata:
   name: nginx
 spec:
   containers:
-    name: nginx
-    image: nginx
-    ports:
-      - containersPorts: 80
-        protocol: TCP
+    - name: nginx
+      image: nginx
+      ports:
+        - containersPorts: 80
+          protocol: TCP
 --- 
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx
+  name: nginx with alpine
 spec:
   containers:
     - name: nginx
@@ -32,7 +32,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata: 
-  name: nginx aith httpd
+  name: nginx with httpd
 spec: 
   containers:
     - name: nginx
