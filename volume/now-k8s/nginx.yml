@@ -14,7 +14,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx with alpine
+  name: nginx-with-alpine
 spec:
   containers:
     - name: nginx
@@ -32,7 +32,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata: 
-  name: nginx with httpd
+  name: nginx-with-httpd
 spec: 
   containers:
     - name: nginx
