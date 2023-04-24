@@ -14,7 +14,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx-with-alpine
+  name: exer2
 spec:
   containers:
     - name: nginx
@@ -27,12 +27,14 @@ spec:
       ports:
         - containerPort: 80
           protocol: TCP
-      args: ["sleep", "1d"]
+      args: 
+        - sleep
+        - 10s
 --- 
 apiVersion: v1
 kind: Pod
 metadata: 
-  name: nginx-with-httpd
+  name: exer3
 spec: 
   containers:
     - name: nginx
@@ -46,8 +48,8 @@ spec:
         - containerPort: 80
           protocol: TCP
       args: 
-        - "sleep"
-        - "1d"               
+        - sleep
+        - 1d               
                     
 
     
