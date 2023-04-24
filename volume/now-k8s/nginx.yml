@@ -1,0 +1,53 @@
+--- 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+    name: nginx
+    image: nginx
+    ports:
+      - containersPorts: 80
+        protocol: TCP
+--- 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      ports:
+        - containersPorts: 80
+          protocol: TCP
+    - name: alpine
+      image: alpine
+      ports:
+        - containerPort: 80
+          protocol: TCP
+      args: ["sleep", "1d"]
+--- 
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: nginx aith httpd
+spec: 
+  containers:
+    - name: nginx
+      image: nginx
+      ports:
+        - containerPort: 80
+          protocol: TCP
+    - name: httpd
+      image: httpd
+      ports:
+        - containerPort: 80
+          protocol: TCP
+      args: 
+        - "sleep"
+        - "1d"               
+                    
+
+    

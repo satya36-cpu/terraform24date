@@ -1,0 +1,23 @@
+--- 
+apiVersion: v1
+kind: 	Pod
+metadata:
+  name: alpine
+  labels: 
+    app: nginx
+  namespace: my-namespace  
+spec:
+  containers: 
+    - name: hello-container
+      image: nginx:1.23
+      ports:
+        - containersPorts: 80
+      protocol: TCP  
+    - name: hello-jekins
+      image: jenkins/jenkins:lts-jdk11
+      ports:
+        - containersPorts: 8080
+      protocol: TCP    
+      command:
+        - sleep
+        - 10s

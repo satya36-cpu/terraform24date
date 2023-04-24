@@ -1,0 +1,50 @@
+--- 
+apiVersion: apps/v1
+kind: 	Deployment
+metadata:
+  name: cache-deploy
+  labels:
+    app: cache
+    namespace: my-namespace
+spec: 
+  minReadySeconds: 5
+  replicas: 1
+  selector:
+    matchlabels: 
+      app: cache
+    matchExpressions:
+      - key: environment
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25 
+      maxUnavailable: 25   
+  template:
+    metadata:
+      name: cache-pod
+      labels:
+      app: cache
+  spec:
+    containers: 
+      - name: cache-container
+        image: cache:7
+        port: 
+          - containerPort: 6379
+            protocol: TCP 
+
+--- 
+apiVersion: v1
+kind: Service
+metadata:
+  name: cache-svc
+spec:
+  selector: cache
+  type: clusterIP
+  ports: 
+    - name: cache-port
+      port: 6379
+      targetPort: 6379
+      protocol: TCP 
+
+
+   

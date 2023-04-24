@@ -1,0 +1,37 @@
+--- 
+apiVersion: batch/v1
+kind: CronJob
+metadata: 
+  name: cronjobdemo
+  namespace: my-namespace
+spec: 
+  schedule: "23 * * * *"
+  jobTemplate: 
+    metadata:
+      name: cronjob1
+      namespace: my-namespace
+      labels:
+       app: alpine 
+    spec: 
+      backofLimit: 6
+      selector: 
+        matchlabels: In
+      template: 
+        metadata:  
+          name: cronjob
+          namespace: my-namespace
+          labels:
+            app: alpine 
+        spec:
+          containers:
+            - name: alpinedemo
+              image: alpaine:3
+              ports:
+                - containersPorts: 80
+              cmd:
+                - sleep
+                - 60s
+          restartPolicy: OnFailure             
+
+              
+    

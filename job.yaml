@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: job
+metadata:
+  name: demo-job
+  namespace: my-namespace
+spec:
+  backofLimit: 3
+  selector:
+    matchlabels:
+      purpose: execute
+    manualSelector: True
+    template:
+      metadata:
+        name: job1
+        namespace: my-namespace
+      spec:
+        containers: 
+          - name: jobdownload
+            image: alpaine:3
+            ports:
+              - containersPorts: 80
+                protocol: tcp 
+            restartPolicy: OnFailure
+            command:
+              - sleep 
+              - 60
+                  

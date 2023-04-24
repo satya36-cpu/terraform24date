@@ -1,0 +1,29 @@
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: cronjob-src
+  namespace: my-namespace
+spec:
+  schedule: "* * * * *"
+  jobTemplate: 
+    metadata:
+      name: CronJob
+    spec:
+      backoffLimit: 3
+      selector:
+        matchLabels:
+          app: CronJob
+      template: 
+        metadata:
+          name: CronJob
+        spec: 
+          containers:
+            - name: cronjob-src
+              image:
+               imagePullPolicy: IfNotPresent
+               command:
+                - /bin/sh
+                - -c
+                - date; echo Hello from the Kubernetes cluste
+          restartPolicy: OnFailure        
