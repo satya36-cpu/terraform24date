@@ -2,7 +2,7 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata: 
-  name: Cronmultiple
+  name: cronmultiple
 spec:
   schedule: '* * * * *'
   jobTemplate:
