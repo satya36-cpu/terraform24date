@@ -9,6 +9,7 @@ spec:
     metadata:
       name: jobonetime
     spec:
+      restartPolicy: OnFailure
       containers: 
         - name: alpine
           image: alpine

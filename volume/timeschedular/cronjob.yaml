@@ -10,8 +10,11 @@ spec:
       name: cronjobmultipletime
     spec:
       backoffLimit: 5
-      template: 
+      template:   
+        metadata:
+          name: joblive
         spec:
+          restartPolicy: OnFailure
           containers:
             - name: nginx
               image: nginx 
