@@ -1,0 +1,39 @@
+<?php
+/**
+ * Extend Warranty
+ *
+ * @author      Extend Magento Team <magento@guidance.com>
+ * @category    Extend
+ * @package     Warranty
+ * @copyright   Copyright (c) 2021 Extend Inc. (https://www.extend.com/)
+ */
+
+/**
+ * @var \Extend\Warranty\Block\System\Config\Products\Button $block
+ */
+
+$scopeData = $block->getScopeData();
+?>
+<div class="extend-sync-button-container">
+    <button id="syncBtn" data-mage-init='{"productSync": {
+            "syncUrls":<?= json_encode($block->getSyncUrls())?>,
+            "resetFlagUrl": "<?= $block->escapeJs($block->getUrl('extend/products_sync/resetFlag')) ?>",
+            "resetSyncDateUrl": "<?= $block->escapeJs($block->getUrl('extend/products_sync/resetSyncDate',[$scopeData['scopeType'] => $scopeData['scopeId']])) ?>"
+        }}' <?php if (!$block->isButtonEnabled()): ?>class="disabled"<?php endif; ?>>
+        <span><?= /* @noEscape */ __('Sync Products') ?></span>
+    </button>
+    <div class="sync-info">
+        <p id="sync-msg">
+            <label for="sync-time"><?= /* @noEscape */ __('Last Sync: ') ?></label>
+            <span id="sync-time">
+                <?= /* @noEscape */ !empty($block->getLastSync()) ? $block->getLastSync() : __('Never') ?>
+            </span>
+        </p>
+        <a id="reset_sync" <?php if(!$block->getLastSync()):?> style="display:none;" <?php endif;?>>
+            <span><?= /* @noEscape */ __('Reset Sync Date') ?></span>
+        </a>
+        <a id="cancel_sync">
+            <span><?= /* @noEscape */ __('Cancel Sync') ?></span>
+        </a>
+    </div>
+</div>
