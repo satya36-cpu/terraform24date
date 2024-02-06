@@ -1,0 +1,319 @@
+a#warranty_enableExtend-head {
+    display: none;
+}
+tr#row_warranty_account_accountbutton > td.label {
+    display: none;
+}
+
+tr#row_warranty_account_accountbutton > td.value{
+    width: 100%;
+}
+
+tr#row_warranty_account_accountbutton > td.value > p.note {
+    display: inline-block;
+    font-size: 14px;
+}
+
+tr#row_warranty_account_help > td.label {
+    display: none;
+}
+
+tr#row_warranty_account_accountbutton > td:last-child {
+    display: none;
+}
+
+tr#row_warranty_products_syncbutton > td.value > p.note {
+    display: inline-block;
+    padding-left: 5%;
+}
+
+tr#row_warranty_advance_config_portalbutton > td.label {
+    display: none;
+}
+
+a#warranty_account-head{
+    display: none;
+}
+
+img#extend-logo{
+    width: 170px;
+}
+
+div.extend__info {
+    color: black;
+    width: 44%;
+    line-height: 19px;
+}
+
+img#extend-mobile{
+    width: 19%;
+}
+
+.extend__intro {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.extend__intro p {
+    margin: 0;
+}
+.action.action-extend-partial-refund {
+    margin-top: 10px;
+}
+
+.action.action-extend-external,
+.action.action-extend-refund,
+.extend-confirm,
+.modal-popup.extend-refund-success .modal-footer .action-primary {
+    border: 1px solid #007dbd;
+    border-radius: 0;
+    display: inline-block;
+    font-weight: 600;
+    line-height: 1.36;
+    text-align: center;
+    vertical-align: baseline;
+    letter-spacing: .025em;
+    background-color: #007dbd;
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.25);
+    white-space: nowrap;
+}
+
+.action.action-extend-external {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    margin-right: 20px;
+}
+
+.action.action-extend-external:hover,
+.action.action-extend-external:active,
+.action.action-extend-external:focus,
+.action.action-extend-refund:hover,
+.action.action-extend-refund:active,
+.action.action-extend-refund:focus,
+.extend-confirm:hover,
+.extend-confirm:active,
+.extend-confirm:focus,
+.modal-popup.extend-refund-success .modal-footer .action-primary:hover,
+.modal-popup.extend-refund-success .modal-footer .action-primary:active,
+.modal-popup.extend-refund-success .modal-footer .action-primary:focus {
+    background-color: #0073ae;
+    border-color: #007dbd;
+    box-shadow: 0 0 0 1px #007bdb;
+    color: #fff;
+    text-decoration: none;
+}
+
+.action.action-extend-external::after {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Admin Icons';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    speak: none;
+    content: '\e644';
+    font-size: 1rem;
+    vertical-align: super;
+    margin-left: 8px;
+}
+
+#eSync {
+    vertical-align: middle !important;
+}
+
+.accordion .config .note {
+    margin: 0;
+}
+
+.accordion .config .note a.extend-account-link {
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+tr#row_warranty_account_help p.note {
+    color: black;
+    font-size: 14px;
+}
+
+tr#row_warranty_account_help p.note a {
+    font-size: 14px;
+}
+
+div.extend-sync-button-container {
+    align-items: center;
+    display: flex;
+}
+
+div.extend-sync-button-container #syncBtn{
+    border: 0;
+    font-weight: bold;
+    padding: .6rem 4.5rem;
+}
+
+div.extend-sync-button-container #syncBtn.syncing {
+    padding-left: 2rem;
+    position: relative;
+}
+
+div.extend-sync-button-container #syncBtn.syncing::after {
+    -webkit-font-smoothing: antialiased;
+    content: '\e603';
+    display: inline-block;
+    font-family: "icons-blank-theme";
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    speak: none;
+    position: absolute;
+    top: -10px;
+    right: 0;
+
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 4000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+div.extend-sync-button-container #syncOrderBtn{
+    border: 0;
+    font-weight: bold;
+    padding: .6rem 4.5rem;
+}
+
+div.extend-sync-button-container #syncOrderBtn.syncing {
+    padding-left: 2rem;
+    position: relative;
+}
+
+div.extend-sync-button-container #syncOrderBtn.syncing::after {
+    -webkit-font-smoothing: antialiased;
+    content: '\e603';
+    display: inline-block;
+    font-family: "icons-blank-theme";
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    speak: none;
+    position: absolute;
+    top: -10px;
+    right: 0;
+
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 4000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+div.extend-sync-button-container .sync-info {
+    margin-left: 30px;
+}
+
+div.extend-sync-button-container .sync-info p{
+    margin: 0;
+}
+
+div.extend-sync-button-container .sync-info #cancel_sync {
+    color: red;
+    display: none;
+    font-weight: bold;
+}
+
+div.extend-sync-button-container .sync-info #orders_cancel_sync {
+    color: red;
+    display: none;
+    font-weight: bold;
+}
+
+.modal-popup.extend-confirm-partial-modal p {
+    text-align: center;
+}
+
+.modal-popup.extend-confirm-partial-modal input {
+    margin: 10px;
+    display: inline-block;
+}
+.modal-popup.extend-confirm-partial-modal span#partial-select-all {
+    margin: 10px 0 0 10px;
+    display: inline-block;
+    cursor: pointer;
+    color: #007dbd;
+}
+
+.modal-popup.extend-confirm-modal .modal-inner-wrap,
+.modal-popup.extend-confirm-partial-modal .modal-inner-wrap {
+    width: 40%;
+    padding: 20px;
+}
+
+.modal-popup.extend-confirm-modal .modal-header {
+    padding-top: 1rem;
+}
+
+.modal-popup.extend-confirm-modal .action-close {
+    padding: 0;
+    right: 7px;
+    top: 7px;
+}
+
+.modal-popup.extend-confirm-modal .action-close::before {
+    font-size: 1.4rem;
+}
+
+.modal-popup.extend-confirm-modal .modal-content {
+    padding: 0;
+}
+
+.modal-popup.extend-confirm-modal .modal-footer {
+    padding: 0;
+}
+
+.modal-popup.extend-refund-success .modal-inner-wrap {
+    width: 25%;
+}
+
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(360deg); }
+    to { -ms-transform: rotate(0deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(360deg); }
+    to { -moz-transform: rotate(0deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(360deg); }
+    to { -webkit-transform: rotate(0deg); }
+}
+@keyframes spin {
+    from { transform:rotate(360deg); }
+    to { transform:rotate(0deg); }
+}
