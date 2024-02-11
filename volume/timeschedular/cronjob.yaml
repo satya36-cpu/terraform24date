@@ -1,0 +1,23 @@
+--- 
+apiVersion: batch/v1
+kind: CronJob
+metadata: 
+  name: cronmultiple
+spec:
+  schedule: '* * * * *'
+  jobTemplate:
+    metadata: 
+      name: cronjobmultipletime
+    spec:
+      backoffLimit: 5
+      template:   
+        metadata:
+          name: joblive
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: nginx
+              image: nginx 
+              command: 
+                - 'sleep'
+                - '20s' 

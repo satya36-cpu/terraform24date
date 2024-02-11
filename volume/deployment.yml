@@ -1,0 +1,25 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Deployment-devops
+  namespace: my-namespace
+spec:
+  minReadySeconds: 10
+  replicas: 1
+  selector:
+    matchLabels:
+      app: Deployment
+  template: 
+    metadata: 
+      name: Deployment
+      labels: 
+        environment: production
+        app: nginx 
+    spec: 
+      containers:
+        - name: nginx
+          image: nginx:1.23
+          ports:
+            - containerPort: 80
+              protocol: TCP     
